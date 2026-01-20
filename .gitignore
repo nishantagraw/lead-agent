@@ -1,0 +1,36 @@
+# Lead Agent - Git Ignore
+
+# Environment and secrets
+.env
+service-account.json
+credentials.json
+
+# Data files (generated at runtime)
+leads.csv
+processed_businesses.json
+synced_cache.json
+progress.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db

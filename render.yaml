@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: lead-agent
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 2 --timeout 120 lead_agent_frontend:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: GOOGLE_PLACES_API_KEY
+        sync: false
+    healthCheckPath: /api/status
+    autoDeploy: true
