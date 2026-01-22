@@ -745,6 +745,6 @@ if __name__ == '__main__':
     print(f"🔄 Existing businesses (no duplicates): {len(existing_business_names)}")
     print("🌐 Dashboard: http://127.0.0.1:5000")
     print("=" * 50)
-    app.run(host='127.0.0.1', port=5000, debug=False)
+    app.run(host='0.0.0.0', port=5000, debug=False)
 
 
